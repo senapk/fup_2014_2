@@ -1,0 +1,31 @@
+LIBS=-lsfml-system -lsfml-graphics -lsfml-window
+PATH=
+
+all: learncodecpp clean run
+
+learncodecpp: main.o componente.o componentemovel.o escritor.o imagemanager.o interface.o constantes.h comando.h
+	g++ main.o componente.o componentemovel.o escritor.o imagemanager.o interface.o -o learncodecpp $(LIBS)
+
+interface.o: interface.cpp interface.h componente.h
+	g++ -c interface.cpp $(LIBS)
+
+componente.o: $(PATH)componente.cpp $(PATH)componente.h
+	g++ -c $(PATH)componente.cpp $(LIBS)
+	
+componentemovel.o: $(PATH)componentemovel.h $(PATH)componentemovel.cpp
+	g++ -c $(PATH)componentemovel.cpp $(LIBS)
+
+escritor.o: escritor.cpp escritor.h
+	g++ -c escritor.cpp $(LIBS)
+
+imagemanager.o: imagemanager.cpp imagemanager.h
+	g++ -c imagemanager.cpp $(LIBS)
+
+main: main.cpp
+	g++ -c main.cpp $(LIBS)
+
+clean: 
+	rm -rf *.o
+
+run:
+	./learncodecpp

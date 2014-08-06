@@ -1,0 +1,7 @@
+O0 parede
+O1 grama
+C0 trilha
+PC personagemCentral/costas personagemCentral/frente personagemCentral/dir personagemCentral/esq
+PO olhar/olharCima olhar/olharBaixo olhar/olharDir olhar/olharEsq
+R0 premio
+I0 cacto

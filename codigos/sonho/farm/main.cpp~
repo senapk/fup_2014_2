@@ -1,0 +1,55 @@
+#include "farm/interface.h"
+#include "farm/comando.h"
+
+int main() {
+    ImageManager::init();
+    Interface::create("learnCode");
+    Interface::espera(SLEEP_INICIAL);
+
+    //COMEÇO DO CÓDIGO DO ALUNO
+    int vezes_esq = 4;
+
+    virar(ESQUERDA);
+
+
+    while(true){
+        while(olhar(ESQUERDA) != CAMINHO) {
+            andar();
+        }
+        if(vezes_esq == 0)
+            andar();
+        else{
+            virar(ESQUERDA);
+            andar();
+            vezes_esq--;
+        }
+    }
+
+
+    andar();
+
+    //FIM DO CÓDIGO DO ALUNO
+
+
+
+    Interface::espera();
+}
+
+/*
+ *FUNÇÕES:
+ *andar()       : void
+ *virar(lado)   : void
+ *olhar(lado)   : Objeto
+ *
+ *
+ *OBJETOS:
+ *CAMINHO
+ *OBSTACULO
+ *PREMIO
+ *INIMIGO
+ *PERSONAGEM
+ *
+ */
+
+
+

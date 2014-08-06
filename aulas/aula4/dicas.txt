@@ -1,0 +1,78 @@
+Como fazer cast:
+    int y = 10;
+    float dosagem = (int) (y + 0.5);
+    float dosagem = static_cast<int> (y + 0.5);
+
+Evitar leiaute instável
+    ovo   = 4;
+    carro = 3;
+    bike  = 1;
+
+    melhor usar:
+    ovo = 4;
+    carro = 3;
+    bike = 1;
+
+Combinando Atribuição e Aritmética
+    total += cont;
+    passo /= 2;
+
+Não use números mágicos
+    float salario_anual = 5000.0
+    float salario_por_dia = salario_anual / 365;
+
+    use ao uma constante:
+        const int dias_do_ano = 365;
+        float salario_por_dia = salario_anual / dias_do_ano;
+
+    exemplo: programas de conversão ceusius e farenheit e kelvin
+
+Enumerações
+    como definir dia da semana, direções, opções?
+    use uma enumeração:
+    enum Dia_da_semana { SEGUNDA, }
+
+Cuidado com a divisão inteira
+
+Comandos de fluxo
+    int dia;
+    cin >> dia; //TENTA pegar um inteiro e colocar em dia
+    string nome_completo;
+    cin >> nome_completo;//pega apenas a primeira palavra
+
+    //para pegar a linha você tem que dar um 
+    getline(cin, name); //vai pegar tudo que tem no buffer até chegar no \n
+    getline(cin, name, '$'); //vai pegar tudo até chegar no char $
+    
+    cin.ignore() apaga tudo que está no buffer até o enter
+    cin.ignore(1000, '\n') ignora 1000 ou até o enter, o que acontecer primeiro
+    cin.fail() verifica se houve erro na leitura
+    cin.clear() destrava o cin
+    cin.get() pega um caracter
+
+Comandos de string
+    string nome = "David Sena";
+    cout << nome; //imprime o nome
+    string primeiro = nome.substr(0, 5); //pega 3 caracteres começando do 0
+    //no caso pegaria "David"
+
+
+Comandos de cout
+    O cabeçalho iomanip #include <iomanip> permite mudar a forma como as coisas aparecem no cout
+    
+    string nome = "Jose";
+
+    cout << "Oi" setw(8) << nome;
+    //vai gerar  Oi    Jose
+    //ao inves   Oi Jose
+    //Jose está ocupando 8 espaços
+
+    cout << setprecision(2);
+    cout << 0.14123213;
+    //vai gerar 0.14
+    //se necessário use
+    cout << fixed << setprecision(2);
+    cout << variavel;
+    //para garantir a impressão dos dígitos não significativos.
+    //fixed e setprecision só precisam ser usados uma vez e ficam registrados. setw precisa ser usado sempre
+
