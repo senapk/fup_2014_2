@@ -1,0 +1,35 @@
+Instruções: A prova vale 11 pontos. Você pode sim tirar 11. O máximo não é 10.
+Cada questão deve gerar um código. Se achar que sua nota não ficou boa, você
+pode fazer a segunda chamada na semana que vem e não precisa enviar sua prova.
+Se quiser enviar a nota e mesmo assim tentar a segunda chamada também pode.
+
+Faça as questões e coloque os nomes. questao1.cpp questao2.cpp etc.
+Depois, pegue as questões que conseguiu fazer e faça uma compactação com o nome
+do arquivo sendo o seu nome e coloque a nota que você acha que conseguiu.
+
+Exemplo: Eu, David fiz as questões 1, 2, 4. Tirei : 8.
+O nome do meu arquivo deve ser : David_8.zip e deve conter 
+questao1.cpp, questao2.cpp, questao4.cpp.
+
+Não existe meia questão. É uma hora de prova. Até 1 hora e 15 de tolerância. Seja honesto.
+
+
+1) Calcule quantos azulejos são necessários para azulejar uma parede. É necessário conhecer a altura da parede (AP), a sua largura (LP), e a altura do azulejo (A) e sua largura (LA). Leia os dados através do teclado. (3 pontos).
+
+2) Elaborar um programa que receba, via teclado, a velocidade em km/h, o tempo em horas e o consumo em litros de um carro e imprima na tela o desempenho do motor em km/l. (3 pts)
+
+3) Faça um programa que receba 2 notas e dois pesos e imprima a média ponderada. Receba nota1, peso1, nota2 e peso2 e mostre a média ponderada.(3 pts)
+
+4) Faça um programa que peça o usuário um número inteiro e se o usuário digitar outra
+coisa como uma string ele reclama. Exemplo de execução.(2 pts)
+Digite um inteiro:
+batata
+Isso não eh um inteiro:
+um
+Isso não eh um inteiro:
+10
+Ok, obrigado.
+
+Dica : voce pode usar um while(!(cin >> numero)){ } para permanecer no laço.
+
+Boa prova.
