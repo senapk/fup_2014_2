@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+Ingles
+    www.learncpp.com
+    http://www.cplusplus.com/doc/tutorial/
+    http://en.wikibooks.org/wiki/C++_Programming
+
+Portugues
+    http://www.ic.unicamp.br/~cmrubira/aacesta/cpp/cpp15.html
+    http://orion.lcg.ufrj.br/C++/curso/#
+
