@@ -1,0 +1,13 @@
+Olhe as questões das aulas passadas e tente refaze-las sem olhar.
+Conforme for tendo dificuldade vá olhando e tirando as dúvidas.
+
+Tente as funções das aulas 6, 7 e 8.
+
+Quando terminar, pegue as funções que fizemos e adicione os testes.
+
+Exemplo: faça os testes para conversão de horas e o joão e maria.
+
+Só um detalhe. Para compara floats você não pode fazer ==, 
+deve usar uma função que tem no problema triangulo.
+
+Se tiver com dificuldade, por favor, marque com um bolsista pelo facebook.
