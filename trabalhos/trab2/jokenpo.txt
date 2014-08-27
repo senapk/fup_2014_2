@@ -1,0 +1,15 @@
+
+Vitorias: 0, Empates: 0, Derrotas: 0.
+Qual sua opção?
+1 - Pedra, 2 - Papel, 3 - Tesoura, 4 - Sair.
+>> 2
+Voce escolheu Papel. O PC escolheu Pedra.
+Voce venceu.
+
+Vitorias: 1, Empates: 0, Derrotas: 0.
+Qual sua opção?
+1 - Pedra, 2 - Papel, 3 - Tesoura, 4 - Sair.
+>>5
+Opcao Invalida
+>>4
+Ate a proxima camarada :)
