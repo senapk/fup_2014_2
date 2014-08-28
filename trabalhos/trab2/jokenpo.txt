@@ -1,15 +1,46 @@
+O objetivo desse trabalho é a criação de um jogo de Jokenpo. 
+A pontuação recebida está relacionada ao quanto foi feito do jogo.
+Se apenas a etapa 1 foi alcançada, o aluno recebe a pontuação da etapa 1.
+Se a etapa 3 foi alcançada, ele recebe a pontuação das etapas 1, 2 e 3.
 
-Vitorias: 0, Empates: 0, Derrotas: 0.
-Qual sua opção?
-1 - Pedra, 2 - Papel, 3 - Tesoura, 4 - Sair.
->> 2
-Voce escolheu Papel. O PC escolheu Pedra.
-Voce venceu.
 
-Vitorias: 1, Empates: 0, Derrotas: 0.
-Qual sua opção?
-1 - Pedra, 2 - Papel, 3 - Tesoura, 4 - Sair.
->>5
-Opcao Invalida
->>4
-Ate a proxima camarada :)
+ETAPA 1 - Uma única execução e você não precisa tratar a entrada de dados. 3 pontos
+Simulação
+	Qual sua opção?
+	1 - Pedra, 2 - Papel, 3 - Tesoura.
+	>> 2
+	Voce escolheu Papel. O PC escolheu Pedra.
+	Voce venceu.
+
+ETAPA 2 - Uma única execução e você precisa tratar a entrada de dados até que seja valida. 3 pontos
+Simulação
+	Qual sua opção?
+	1 - Pedra, 2 - Papel, 3 - Tesoura.
+	>> 5
+	Opcao Invalida
+	>> quinze
+	Opcao Invalida
+	>> 2
+	Voce escolheu Papel. O PC escolheu Pedra.
+	Voce venceu.
+
+ETAPA 3 - Adicione a contagem de pontos e mantenha o loop até que o usuário queira sair. 4 pontos
+Simulação
+	Vitorias: 0, Empates: 0, Derrotas: 0.
+	Qual sua opção?
+	1 - Pedra, 2 - Papel, 3 - Tesoura, 4 - Sair.
+	>> 2
+	Voce escolheu Papel. O PC escolheu Pedra.
+	Voce venceu.
+
+	Vitorias: 1, Empates: 0, Derrotas: 0.
+	Qual sua opção?
+	1 - Pedra, 2 - Papel, 3 - Tesoura, 4 - Sair.
+	>>5
+	Opcao Invalida
+	>>4
+	Ate a proxima camarada :)
+
+O trabalho vale de 0 a 10. O valor 10 corresponde a 0.2 de nota na sua média final.
+O código também será avaliado pela clareza, coerência, nomeclatura das variáveis e identação.
+
