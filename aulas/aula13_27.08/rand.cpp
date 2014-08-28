@@ -17,9 +17,9 @@ int main ()
     cout << rand() % 10 << endl;
     return 0;
 
-    //13 e 30 - 17
-    //rand()%17 + 13
+    //13 e 30 - 18
+    //rand()%18 + 13
     //
     //34 e 75
-    //rand() % 41 + 34
+    //rand() % 42 + 34
 }
