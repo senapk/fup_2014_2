@@ -1,0 +1,27 @@
+Boa Sorte:
+
+Voce: 0, Mesa: 0
+Digite Pedir = 1, Parar = 2
+>> 1
+Sua carta eh 4
+A mesa eh 5
+Voce: 4, Mesa: 5
+Digite Pedir = 1, Parar = 2
+>> 1
+Sua carta eh 1
+A mesa eh 9
+Voce: 5, Mesa: 14
+Digite Pedir = 1, Parar = 2
+>> 1
+Sua carta eh 13
+A mesa eh 1
+Voce: 18, Mesa: 15
+Digite Pedir = 1, Parar = 2
+>> 2
+A mesa eh 1
+Voce: 18, Mesa: 16
+A mesa eh 2
+Voce: 18, Mesa: 18
+Parabens, voce perdeu!!!! Seu mané
+
+
