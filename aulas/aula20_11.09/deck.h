@@ -106,15 +106,16 @@ string to_string(vector<Carta> cartas, int quebra){
     for(int i = 0; i < (int) cartas.size() - 1; i++){
         if(i != 0 and i % quebra == 0)
             saida << endl << " ";
-        Carta carta = cartas[i];
-        saida << to_string(carta) << ",";
+        saida << to_string(cartas[i]) << ",";
     }
     saida << to_string(cartas.back()) << " ]" << endl;
     return saida.str();
 }
 
 void ordenar_valor(vector<Carta> & cartas){
-    sort(begin(cartas), end(cartas), [](Carta c1, Carta c2){return c1.valor < c2.valor;});
+    sort(begin(cartas), end(cartas), [](Carta c1, Carta c2){
+        return c1.valor < c2.valor;
+    });
 }
 void ordenar_naipe(vector<Carta> & cartas){
     sort(begin(cartas), end(cartas), [](Carta c1, Carta c2){
@@ -125,6 +126,11 @@ void ordenar_naipe(vector<Carta> & cartas){
 }
 
 void embaralhar(vector<Carta> & cartas){
+    static int init = 0;
+    if(init == 0){
+        init = 1;
+        srand(time(NULL));
+    }
     random_shuffle(begin(cartas), end(cartas));
 }
 

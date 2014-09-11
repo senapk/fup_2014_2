@@ -5,14 +5,13 @@ using namespace std;
 #include <cstdlib>
 
 int main(){
-    srand(time(NULL));
     vector<Carta> baralho = get_baralho();
     cout << "baralho criado" << endl << to_string(baralho) << endl;
     ordenar_valor(baralho);
     cout << "ordenado por valor" << endl << to_string(baralho) << endl;
     ordenar_naipe(baralho);
     cout << "ordenado por naipe" << endl << to_string(baralho) << endl;
-    random_shuffle(begin(baralho), end(baralho));
+    embaralhar(baralho);
     cout << "embaralhado" << endl << to_string(baralho) << endl;
 
     vector<Carta> mao;
