@@ -6,6 +6,8 @@
 #include <vector>
 #include <iomanip> //setw
 #include <sstream>
+#include <ctime>
+#include <cstdlib>
 
 using namespace std;
 

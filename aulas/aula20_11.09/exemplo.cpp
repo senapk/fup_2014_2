@@ -1,8 +1,11 @@
 #include <iostream>
 #include "deck.h"
 using namespace std;
+#include <ctime>
+#include <cstdlib>
 
 int main(){
+    srand(time(NULL));
     vector<Carta> baralho = get_baralho();
     cout << "baralho criado" << endl << to_string(baralho) << endl;
     ordenar_valor(baralho);
