@@ -1,0 +1,72 @@
+#ifndef RULES_H
+#define RULES_H
+#include "deck.h"
+
+struct Jogada{
+    vector<Carta> mao;
+    float aposta;
+};
+
+//A vale 11 ou 1, o que for melhor, rei, dama e valete valem 10.
+//O resto vale o próprio valor
+int calcular_pontos(Jogada jogada){
+    int total = 0;
+    int num_as = 0;
+    for(auto carta : jogada.mao){
+        int elem = carta.valor;
+        if(elem == 1){
+            num_as++;
+            total += 11;
+        }
+        else if(elem > 10){
+            total += 10;
+        }
+        else{
+            total += elem;
+        }
+        if(total > 21 and num_as > 0){
+            total -= 10;
+            num_as--;
+        }
+    }
+    return total;
+}
+
+//juntar vários baralhos usando o método de pegar um baralho
+vector<int> get_baralhos(int qtd = 1){
+    vector<int> baralhos;
+    for(size_t i = 0; i < qtd; i++){
+        //vector<Carta> novo = get_baralho();
+        auto novo = get_baralho();
+        for(size_t j = 0; j < novo.size(); ++j)
+            baralhos.push_back(novo[j]);
+        //ou entao
+        //baralho.insert(end(baralhos), begin(novo), end(novo));
+    }
+    return baralhos;
+}
+
+//devolver uma jogada para o baralho
+//esvazia jogada
+vector<int> devolver(vector<Carta> & pilha, Jogada & jogada){
+    //atalhos possiveis para jogada.mao
+    //vector<int> & mao = jogada.mao;
+    //auto & mao = jogada.mao;
+
+    for (auto j : jogada.mao){
+        pilha.push_back(j);
+    }
+    jogada.mao.clear();
+    //ou entao
+    //while(jogada.mao.size() > 0){
+        //pilha.push_back(jogada.mao.back())
+            //jogada.mao.pop_back();
+    //}
+    //ou entao
+    for(size_t i = (jogada.mao.size() - 1); i >=0; i--){
+        pilha.push_back(jogada.mao[i]);
+        jogada.mao.pop_back();
+    }
+}
+
+#ifndef
