@@ -13,8 +13,40 @@ using namespace std;
 //Devolva um novo vetor, sem números repetidos e ordenado.
 //Voce pode usar o sort da std para ordenar.
 
+//int pos_primeiro(vector<int> vet, int elem){
+    //for(int i = 0; i < (int)vet.size(); i++){
+        //if(vet[i] == elem)
+            //return i;
+    //}
+    //return -1;
+//}
+
+//#include <algorithm>
+//vector<int> pegar_exemplares(vector<int> vet){
+    //vector<int> exemplares;
+    //for(int i = 0; i < (int)vet.size(); i++){
+        //if(pos_primeiro(vet, vet[i]) == i)
+            //exemplares.push_back(vet[i]);
+    //}
+    //sort(begin(exemplares), end(exemplares));
+    //return exemplares;
+//}
+
+bool tem_igual(vector<int> vet, int pos, int elem){
+    for(int i = 0; i < pos; i++)
+        if(vet[i] == elem)
+            return true;
+    return false;
+}
+
 vector<int> pegar_exemplares(vector<int> vet){
-    return vector<int>();
+    vector<int> exemplares;
+    for(int i = 0; i < (int)vet.size(); i++)
+        if(!tem_igual(vet, i, vet[i]))
+            exemplares.push_back(vet[i]);
+
+    sort(begin(exemplares), end(exemplares));
+    return exemplares;
 }
 
 int main ()

@@ -10,7 +10,11 @@ um vetor.
 */
 
 float media(vector<float> vet) {
-    return 0.0;
+    float soma = 0;
+    for(float elem : vet)
+        soma += elem;
+    float med = soma / vet.size();
+    return med;
 }
 
 //@tests

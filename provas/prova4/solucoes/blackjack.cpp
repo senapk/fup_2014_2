@@ -15,7 +15,23 @@ using namespace std;
 //sao o A, J, Q, K
 
 int blackjack(vector<int> mao){
-    return 0;
+    int total = 0;
+    int n_as = 0;
+    for(int carta : mao){
+        if(carta == 1){
+            total += 11;
+            n_as++;
+        }else if(carta > 9){
+            total += 10;
+        }else{
+            total += carta;
+        }
+    }
+    while(total > 21 and n_as > 0){
+        n_as--;
+        total -= 10;
+    }
+    return total;
 }
 
 int main(){
@@ -29,4 +45,5 @@ int main(){
     cout << (blackjack({1, 1, 2, 3, 1}) == 18);
     cout << endl;
     cout << "#end";
+    return 0;
 }
