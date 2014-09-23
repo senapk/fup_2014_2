@@ -24,6 +24,7 @@ int main(){
     cout << (blackjack({11, 13}) == 20);
     cout << (blackjack({1, 1, 1}) == 13);
     cout << (blackjack({1, 1, 2, 3, 12}) == 17);
+    cout << (blackjack({1, 1, 2, 13, 12}) == 24);
     //@--
     cout << (blackjack({1, 1, 2, 3, 1}) == 18);
     cout << endl;
