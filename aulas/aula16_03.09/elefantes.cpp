@@ -13,7 +13,7 @@ struct Elefante{
 
 bool um_vem_primeiro(Elefante um, Elefante dois){
     if(um.sexo == dois.sexo){
-        if(um.peso > dois.peso)
+        if(um.peso < dois.peso)
             return true;
         return false;
     }
@@ -32,7 +32,7 @@ void print(vector<Elefante> elefantes){
 
 int main ()
 {
-    vector<Elefante> circo = {{1400, "Sofia", FEMEA}, {2500, "Jorge", MACHO},
+    vector<Elefante> circo = {{3400, "Sofia", FEMEA}, {2500, "Jorge", MACHO},
                            {2000, "Gorete", FEMEA}, {10000, "Faustao", MACHO}};
     print(circo);
     sort(circo.begin(), circo.end(), um_vem_primeiro);

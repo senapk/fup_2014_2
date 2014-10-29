@@ -30,6 +30,30 @@ void imprime_carta(Carta carta){
     }
 }
 
+//stringstream
+#include <sstream>
+
+string pegar_carta(Carta carta){
+	stringstream out;
+    switch(carta.valor)
+    {
+        case AS: out << "As "; break;
+        case VALETES: out << "Valetes "; break;
+        case DAMAS: out << "Damas "; break;
+        case REIS: out << "Reis "; break;
+        default: out << (int) carta.valor << " ";
+    }
+    out << "de ";
+    switch(carta.naipe)
+    {
+        case OUROS: out << "Ouros"; break;
+        case ESPADAS: out << "Espadas"; break;
+        case COPAS: out << "Copas " ; break;
+        case PAUS: out << "Paus"; break;
+    }
+    return out.str();
+}
+
 
 string nome_carta(Carta carta){
     string nome = "";

@@ -16,7 +16,7 @@ string print(vector<int> baralho){
 
 //retornar os animais que estão sozinhos
 //[1 2 3 2 4 6 1 8 7]
-//[1 3 4 8 7]
+//[3 4 6 8 7]
 vector<int> pegar_sozinhos(vector<int> vet){
     vector<int> sozinhos;
     for(int referencia : vet){

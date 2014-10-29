@@ -72,6 +72,7 @@ void ordenar(vector<int> & baralho){
 
 void print(vector<int> baralho){
     cout << "[";
+
     for(int elem : baralho){
         cout << elem << " ";
     }
@@ -86,7 +87,7 @@ int pedir_carta(vector<int> & baralho){
     return valor;
 }
 
-int main ()
+int main()
 {
     vector<int> baralho = pegar_baralho();
     print(baralho);
@@ -95,6 +96,13 @@ int main ()
     print(baralho);
 
     vector<int> mao;
+    mao.push_back(pedir_carta(baralho));
+    mao.push_back(pedir_carta(baralho));
+    mao.push_back(pedir_carta(baralho));
+    mao.push_back(pedir_carta(baralho));
+    print(mao);
+
+    mao.clear();
     mao.push_back(pedir_carta(baralho));
     mao.push_back(pedir_carta(baralho));
     mao.push_back(pedir_carta(baralho));

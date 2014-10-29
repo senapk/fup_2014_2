@@ -1,8 +1,8 @@
 #include <iostream>
 #include "deck.h"
 using namespace std;
-#include <ctime>
-#include <cstdlib>
+
+#include "rules.cpp"
 
 int main(){
     vector<Carta> baralho = get_baralho();
@@ -22,6 +22,11 @@ int main(){
     mao.push_back(puxar_carta(baralho));
     cout << "mao puxada" << endl << to_string(mao) << endl;
     cout << "baralho que sobrou" << endl << to_string(baralho) << endl;
+
+    for(Regra r : Grupo){
+        if(r.funcao({1, 2, 3}) > 0
+                cout r.name
+    }
 
     return 0;
 }

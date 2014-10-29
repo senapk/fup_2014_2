@@ -14,7 +14,7 @@ int main ()
                              Verde, Amarela, Amarela, Verde,
                              Verde, Verde, Verde, Verde, Verde};
 
-    int qtd = 0;
+    auto qtd = 0;
 
     for(auto banana : sacola){
         if(banana == Verde)

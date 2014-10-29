@@ -12,6 +12,6 @@ bool eh_final_de_semana(DiadaSemana dia){
 int main ()
 {
     cout << (eh_final_de_semana(DOM) == true);
-    cout << (eh_final_de_semana(SEX) == false);
+    cout << (eh_final_de_semana(SEX) == true);
     return 0;
 }

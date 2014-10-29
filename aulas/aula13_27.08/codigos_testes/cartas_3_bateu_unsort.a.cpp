@@ -11,8 +11,8 @@
 #include <iostream>
 using namespace std;
 
-#include <motor.h>
-//#define motor cout
+//#include <motor.h>
+#define motor cout
 
 
 //Escreva uma função que verifica se o trio de cartas passadas por parametro forma
@@ -42,11 +42,13 @@ bool bateu_ordenado(Carta um, Carta dois, Carta tres){
 //@end
 
 void tests() {
-    //motor << "bateu_ordenado BRONZE IF ENUM STRUCT FOR" << endl;
     motor << "bateu_ordenado OURO IF" << endl;
-    motor << (bateu_ordenado(Carta{DOIS, PAUS}, Carta{TRES, OUROS}, Carta{QUATRO, ESPADAS}) == false);
-    motor << (bateu_ordenado(Carta{DOIS, OUROS}, Carta{TRES, OUROS}, Carta{QUATRO, OUROS}) == true);
-    motor << (bateu_ordenado(Carta{DOIS, OUROS}, Carta{DOIS, OUROS}, Carta{DOIS, ESPADAS}) == true);
+    motor << (bateu_ordenado(Carta{DOIS, PAUS}, Carta{TRES, OUROS},
+              Carta{QUATRO, ESPADAS}) == false);
+    motor << (bateu_ordenado(Carta{DOIS, OUROS}, Carta{TRES, OUROS},
+              Carta{QUATRO, OUROS}) == true);
+    motor << (bateu_ordenado(Carta{DOIS, OUROS}, Carta{DOIS, OUROS},
+              Carta{DOIS, ESPADAS}) == true);
 }
 
 int main(){
