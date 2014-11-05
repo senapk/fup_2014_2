@@ -5,6 +5,21 @@
 #include<string.h>
 using namespace std;
 
+template <class T>
+T get_valor(string msg = ""){
+    T valor;
+    while(true){
+        cout << msg << endl;
+        cin >> valor;
+        if(cin.fail()){
+            cin.clear();
+            cin.ignore(1000, '\n');
+            continue;
+        }
+        return valor;
+    }
+}
+
 struct Aluno {
     string nome;
     int matricula;
@@ -179,21 +194,6 @@ struct Registro{
             << "\tX   -  eXit   - termina o programa" << endl << endl;
     }
 
-    int getInt(){
-        int pos;
-        while(true){
-            cin >> pos;
-            if(cin.fail()){
-                cin.clear();
-                cin.ignore(1000, '\n');
-                cout << "Digite um numero" << endl;
-            }else{
-                break;
-            }
-        }
-        return pos;
-    }
-
     void menu(){
         char op = ' ';
         show_help();
@@ -207,9 +207,9 @@ struct Registro{
                 case 'A': add(); break;
                 case 'S': show(); break;
                 case 'Q': cout << qtd() << endl; break;
-                case 'C': change(getInt()); break;
-                case 'O': show(getInt()); break;
-                case 'R': remove(getInt()); break;
+                case 'C': change(get_valor<int>("Indice ")); break;
+                case 'O': show(get_valor<int>("Indice ")); break;
+                case 'R': remove(get_valor<int>("Indice ")); break;
                 case 'X': break;
                 default :
                           cout << "Comando inválido" << endl;
